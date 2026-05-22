@@ -1,0 +1,178 @@
+---
+// Technologies I Use Section
+const frontend = [
+  { name: 'React', color: '#61DAFB' },
+  { name: 'Next.js', color: '#FFFFFF' },
+  { name: 'Vue.js', color: '#4FC08D' },
+  { name: 'Nuxt.js', color: '#00DC82' },
+  { name: 'TypeScript', color: '#3178C6' },
+  { name: 'Tailwind', color: '#06B6D4' },
+  { name: 'Bootstrap', color: '#7952B3' },
+];
+
+const backend = [
+  { name: 'Node.js', color: '#339933' },
+  { name: 'PHP', color: '#777BB4' },
+  { name: 'Laravel', color: '#FF2D20' },
+  { name: 'Nest.js', color: '#E0234E' },
+  { name: 'Express.js', color: '#FFFFFF' },
+  { name: 'TypeScript', color: '#3178C6' },
+  { name: 'MongoDB', color: '#47A248' },
+  { name: 'PostgreSQL', color: '#4169E1' },
+];
+
+const tools = [
+  { name: 'Git', color: '#F05032' },
+  { name: 'Docker', color: '#2496ED' },
+  { name: 'AWS', color: '#FF9900' },
+  { name: 'Redis', color: '#DC382D' },
+  { name: 'Prisma', color: '#2D3748' },
+  { name: 'Figma', color: '#F24E1E' },
+];
+---
+
+<section id="about" class="py-20 md:py-28 bg-card/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold">Technologies I Use</h2>
+    </div>
+
+    <!-- Tech Categories -->
+    <div class="space-y-12">
+      <!-- Frontend -->
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <h3 class="text-sm font-medium text-text-secondary uppercase tracking-wider">Frontend</h3>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          {frontend.map((tech) => (
+            <div class="flex items-center gap-3 bg-card border border-border rounded-xl px-4 py-3 hover:border-accent/30 transition-all duration-200 cursor-pointer group">
+              <div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center">
+                {tech.name === 'React' && (
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill={tech.color}>
+                    <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.31 0-.603.044-.882.152-1.137.416-1.58 1.667-1.32 3.518.252 1.823 1.092 4.058 2.417 6.39C5.985 13.702 5.06 15.588 4.73 17.12c-.34 1.6-.09 2.837 1.04 3.249.255.093.542.14.849.14 1.346 0 3.107-.96 4.888-2.622 1.78 1.653 3.542 2.602 4.887 2.602.31 0 .603-.044.882-.152 1.137-.416 1.58-1.667 1.32-3.518-.252-1.823-1.092-4.058-2.417-6.39 1.337-2.358 2.262-4.244 2.592-5.776.34-1.6.09-2.837-1.04-3.249a1.855 1.855 0 0 0-.849-.14z"/>
+                  </svg>
+                )}
+                {tech.name === 'Next.js' && (
+                  <span class="text-sm font-bold" style={`color: ${tech.color}`}>N</span>
+                )}
+                {tech.name === 'Vue.js' && (
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill={tech.color}>
+                    <path d="M2 0h5.5L12 5.5 16.5 0H22L12 18 2 0zm7.5 0L12 5l2.5-5h-5z"/>
+                  </svg>
+                )}
+                {tech.name === 'Nuxt.js' && (
+                  <span class="text-sm font-bold" style={`color: ${tech.color}`}>Nx</span>
+                )}
+                {tech.name === 'TypeScript' && (
+                  <span class="text-sm font-bold" style={`color: ${tech.color}`}>TS</span>
+                )}
+                {tech.name === 'Tailwind' && (
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill={tech.color}>
+                    <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+                  </svg>
+                )}
+                {tech.name === 'Bootstrap' && (
+                  <span class="text-sm font-bold" style={`color: ${tech.color}`}>B</span>
+                )}
+              </div>
+              <span class="text-sm font-medium text-text-secondary group-hover:text-white transition-colors duration-200">{tech.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <h3 class="text-sm font-medium text-text-secondary uppercase tracking-wider">Backend</h3>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          {backend.map((tech) => (
+            <div class="flex items-center gap-3 bg-card border border-border rounded-xl px-4 py-3 hover:border-accent/30 transition-all duration-200 cursor-pointer group">
+              <div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center">
+                {tech.name === 'Node.js' && (
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill={tech.color}>
+                    <path d="M11.998 24c-.321 0-.641-.084-.922-.247l-2.936-1.737c-.438-.245-.224-.332-.08-.383.585-.204.703-.25 1.328-.604.065-.037.151-.023.218.017l2.256 1.339c.082.045.198.045.275 0l8.795-5.076c.082-.047.134-.141.134-.238V6.921c0-.099-.053-.192-.137-.242l-8.791-5.072c-.081-.047-.189-.047-.271 0L3.075 6.68c-.084.048-.14.144-.14.242v10.15c0 .097.056.189.138.236l2.409 1.392c1.307.654 2.108-.116 2.108-.89V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.112.255.253v10.021c0 1.745-.95 2.745-2.604 2.745-.508 0-.909 0-2.026-.551L2.28 18.675c-.57-.329-.922-.943-.922-1.604V6.921c0-.659.353-1.275.922-1.603L11.075.242c.556-.317 1.293-.317 1.844 0l8.794 5.076c.57.329.924.944.924 1.603v10.15c0 .659-.354 1.273-.924 1.604l-8.794 5.078c-.28.163-.6.247-.921.247z"/>
+                  </svg>
+                )}
+                {tech.name === 'PHP' && (
+                  <span class="text-sm font-bold" style={`color: ${tech.color}`}>PHP</span>
+                )}
+                {tech.name === 'Laravel' && (
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill={tech.color}>
+                    <path d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934c0 .135-.073.26-.189.326l-9.06 5.22a.361.361 0 01-.066.028.36.36 0 01-.21 0 .354.354 0 01-.066-.028L.494 18.755a.366.366 0 01-.188-.326V3.578c0-.034.005-.069.014-.1a.3.3 0 01.027-.065.306.306 0 01.04-.059.291.291 0 01.052-.043l.015-.012a.291.291 0 01.053-.027l4.512-2.6a.367.367 0 01.377 0l4.513 2.6a.291.291 0 01.052.027l.016.012c.019.014.036.027.052.043.014.018.028.038.04.06a.3.3 0 01.027.064.364.364 0 01.014.1V13.7l3.76-2.164V6.628c0-.035.005-.069.014-.1a.299.299 0 01.068-.124c.019-.018.036-.027.052-.043l.016-.012.052-.027 4.513-2.6a.367.367 0 01.377 0l4.513 2.6a.291.291 0 01.052.027l.015.012.052.043c.015.018.029.038.041.059a.3.3 0 01.027.065z"/>
+                  </svg>
+                )}
+                {tech.name === 'Nest.js' && (
+                  <span class="text-sm font-bold" style={`color: ${tech.color}`}>Ns</span>
+                )}
+                {tech.name === 'Express.js' && (
+                  <span class="text-sm font-bold" style={`color: ${tech.color}`}>Ex</span>
+                )}
+                {tech.name === 'TypeScript' && (
+                  <span class="text-sm font-bold" style={`color: ${tech.color}`}>TS</span>
+                )}
+                {tech.name === 'MongoDB' && (
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill={tech.color}>
+                    <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218z"/>
+                  </svg>
+                )}
+                {tech.name === 'PostgreSQL' && (
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill={tech.color}>
+                    <path d="M23.5594 14.7228c-.0346-.0403-.07-.0593-.1064-.0593-.154 0-.3564.193-.4634.391-.2332.432-.4892.7924-.7982 1.0814.1328-2.2468.1436-4.122.0294-5.4822C21.6404 3.7266 18.7714 0 15.9544 0c-1.2186 0-2.265.658-3.0882 1.9264C12.0836.6674 11.1836 0 10.0454 0 7.748 0 5.7056 2.5412 4.8428 6.3666 2.636 6.894 1.074 7.9116 1.074 9.0804c0 .9662.818 1.8386 2.3596 2.524-.0422.5224-.0638 1.0526-.0638 1.5884 0 6.1026 2.3484 10.808 5.4882 10.808 1.4818 0 2.6944-.8778 3.6056-2.606.911 1.7282 2.1234 2.606 3.6056 2.606 3.14 0 5.4882-4.7054 5.4882-10.808a15.99 15.99 0 00-.0064-.4342c1.316-.6306 2.0686-1.4416 2.0686-2.3382 0-.214-.0208-.427-.06-.6096z"/>
+                  </svg>
+                )}
+              </div>
+              <span class="text-sm font-medium text-text-secondary group-hover:text-white transition-colors duration-200">{tech.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Tools & Others -->
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <h3 class="text-sm font-medium text-text-secondary uppercase tracking-wider">Tools & Others</h3>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          {tools.map((tech) => (
+            <div class="flex items-center gap-3 bg-card border border-border rounded-xl px-4 py-3 hover:border-accent/30 transition-all duration-200 cursor-pointer group">
+              <div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center">
+                {tech.name === 'Git' && (
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill={tech.color}>
+                    <path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.66 2.66c.645-.222 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.72.719-1.885.719-2.604 0-.545-.545-.676-1.342-.396-2.009L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.713.721-1.879.721-2.588 0-.713-.717-.713-1.879 0-2.6.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.544-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/>
+                  </svg>
+                )}
+                {tech.name === 'Docker' && (
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill={tech.color}>
+                    <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.119a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.186.186 0 00-.184-.186H2.136a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m15.893.787c-1.075 0-2.033.177-2.893.531-.39-.614-1-1.05-1.067-1.05a.085.085 0 00-.055.019c-.036.03-.039.083-.009.119l.71.992c-.472.447-.842 1.013-1.079 1.64-.228-.054-.466-.087-.712-.098a4.84 4.84 0 00-.374-.007c-.274.004-.547.033-.815.089-.065-.16-.176-.388-.286-.586l.001-.002a.085.085 0 00-.026-.11c-.035-.03-.088-.024-.119.012-.073.084-.34.398-.696.966-.86-.354-1.818-.531-2.893-.531-4.36 0-7.928 2.24-7.928 4.98 0 2.74 3.568 4.98 7.928 4.98s7.928-2.24 7.928-4.98c0-2.74-3.568-4.98-7.928-4.98"/>
+                  </svg>
+                )}
+                {tech.name === 'AWS' && (
+                  <span class="text-xs font-bold" style={`color: ${tech.color}`}>AWS</span>
+                )}
+                {tech.name === 'Redis' && (
+                  <span class="text-sm font-bold" style={`color: ${tech.color}`}>R</span>
+                )}
+                {tech.name === 'Prisma' && (
+                  <span class="text-sm font-bold text-white">P</span>
+                )}
+                {tech.name === 'Figma' && (
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill={tech.color}>
+                    <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019c1.677 0 3.042-1.355 3.042-3.019v-3.019H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.098-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/>
+                  </svg>
+                )}
+              </div>
+              <span class="text-sm font-medium text-text-secondary group-hover:text-white transition-colors duration-200">{tech.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

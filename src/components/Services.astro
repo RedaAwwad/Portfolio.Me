@@ -1,0 +1,72 @@
+---
+// Services Section
+const services = [
+  {
+    icon: 'code',
+    title: 'Web Development',
+    description: 'Build fast, responsive and scalable web applications with modern technologies.',
+  },
+  {
+    icon: 'api',
+    title: 'API & Backend',
+    description: 'Design and develop robust APIs and backend systems that scale with your business.',
+  },
+  {
+    icon: 'performance',
+    title: 'Performance & SEO',
+    description: 'Optimize applications for speed, performance and search engine visibility.',
+  },
+  {
+    icon: 'consulting',
+    title: 'Consulting',
+    description: 'Technical consulting to help you build, scale and optimize your products and teams.',
+  },
+];
+---
+
+<section id="services" class="py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="mb-12">
+      <p class="text-xs uppercase tracking-[0.2em] text-accent font-medium mb-3">WHAT I DO</p>
+      <h2 class="text-3xl md:text-4xl font-bold">Services I Offer</h2>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {services.map((service) => (
+        <div class="bg-card border border-border rounded-2xl p-6 hover:border-accent/30 hover:bg-card-hover transition-all duration-300 cursor-pointer group">
+          <!-- Icon -->
+          <div class="w-12 h-12 rounded-xl border border-border bg-surface flex items-center justify-center mb-5 group-hover:border-accent/30 transition-colors duration-300">
+            {service.icon === 'code' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent group-hover:text-yellow-400 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+              </svg>
+            )}
+            {service.icon === 'api' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent group-hover:text-yellow-400 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
+              </svg>
+            )}
+            {service.icon === 'performance' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent group-hover:text-yellow-400 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
+            )}
+            {service.icon === 'consulting' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent group-hover:text-yellow-400 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+              </svg>
+            )}
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-accent transition-colors duration-300">{service.title}</h3>
+          
+          <!-- Description -->
+          <p class="text-sm text-text-secondary leading-relaxed">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

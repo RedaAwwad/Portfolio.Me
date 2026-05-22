@@ -1,0 +1,86 @@
+---
+// Testimonials Section
+const testimonials = [
+  {
+    quote: "Reda is an exceptional developer. He delivered high-quality work on time and went above and beyond to ensure everything was perfect.",
+    name: 'Sarah Johnson',
+    role: 'Product Manager, TechFlow',
+    initials: 'SJ',
+    gradient: 'from-blue-500 to-purple-600',
+  },
+  {
+    quote: "Working with Reda was a game-changer for our project. His technical expertise and communication are top-notch.",
+    name: 'Michael Chen',
+    role: 'CTO, DataForce',
+    initials: 'MC',
+    gradient: 'from-green-500 to-teal-600',
+  },
+  {
+    quote: "Reda's code is clean, efficient, and well-structured. He truly cares about best practices and business impact.",
+    name: 'David Williams',
+    role: 'Founder, WebCraft',
+    initials: 'DW',
+    gradient: 'from-accent to-orange-600',
+  },
+  {
+    quote: "Highly professional and very dedicated. He transformed our ideas into a robust and scalable solution.",
+    name: 'Emily Brown',
+    role: 'CEO, Innovatech',
+    initials: 'EB',
+    gradient: 'from-pink-500 to-rose-600',
+  },
+];
+---
+
+<section id="testimonials" class="py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="flex items-end justify-between mb-12">
+      <div>
+        <p class="text-xs uppercase tracking-[0.2em] text-accent font-medium mb-3">TESTIMONIALS</p>
+        <h2 class="text-3xl md:text-4xl font-bold">What Clients Say</h2>
+      </div>
+      <!-- Navigation Arrows -->
+      <div class="hidden md:flex items-center gap-2">
+        <button id="testimonials-prev" class="w-10 h-10 rounded-full border border-border bg-card flex items-center justify-center hover:border-accent/30 transition-colors duration-200 cursor-pointer" aria-label="Previous testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button id="testimonials-next" class="w-10 h-10 rounded-full border border-accent bg-accent/10 flex items-center justify-center hover:bg-accent/20 transition-colors duration-200 cursor-pointer" aria-label="Next testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {testimonials.map((testimonial) => (
+        <div class="bg-card border border-border rounded-2xl p-6 hover:border-accent/30 transition-all duration-300 group">
+          <!-- Quote Icon -->
+          <div class="mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-accent/40" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4.017v10H0z"/>
+            </svg>
+          </div>
+
+          <!-- Quote Text -->
+          <p class="text-sm text-text-secondary leading-relaxed mb-6">"{testimonial.quote}"</p>
+
+          <!-- Author -->
+          <div class="flex items-center gap-3">
+            <div class={`w-10 h-10 rounded-full bg-gradient-to-br ${testimonial.gradient} flex items-center justify-center text-xs font-bold text-white`}>
+              {testimonial.initials}
+            </div>
+            <div>
+              <p class="text-sm font-semibold">{testimonial.name}</p>
+              <p class="text-xs text-text-muted">{testimonial.role}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

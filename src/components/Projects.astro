@@ -1,0 +1,84 @@
+---
+// Featured Projects Section
+const projects = [
+  {
+    image: '/images/project-analytics.png',
+    title: 'Analytics Dashboard',
+    description: 'A real-time analytics dashboard with charts, filters and user management.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+  },
+  {
+    image: '/images/project-ecommerce.png',
+    title: 'E-commerce Platform',
+    description: 'Full-featured e-commerce platform with payments, orders and admin dashboard.',
+    tags: ['React.js', 'Stripe', 'MongoDB'],
+  },
+  {
+    image: '/images/project-ai-content.png',
+    title: 'AI Content Generator',
+    description: 'AI-powered tool to generate content, ideas and SEO-optimized copy articles.',
+    tags: ['React', 'OpenAI API', 'Tailwind CSS'],
+  },
+];
+---
+
+<section id="portfolio" class="py-20 md:py-28 bg-card/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="flex items-end justify-between mb-12">
+      <div>
+        <p class="text-xs uppercase tracking-[0.2em] text-accent font-medium mb-3">FEATURED PROJECTS</p>
+        <h2 class="text-3xl md:text-4xl font-bold">Some Things I've Built</h2>
+      </div>
+      <a href="#" class="hidden sm:inline-flex items-center gap-2 text-accent text-sm font-medium hover:underline cursor-pointer">
+        View All Projects
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.map((project) => (
+        <div class="bg-card border border-border rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-300 group cursor-pointer">
+          <!-- Image -->
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img
+              src={project.image}
+              alt={project.title}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60"></div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6">
+            <h3 class="text-lg font-semibold mb-2 group-hover:text-accent transition-colors duration-200">{project.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed mb-4">{project.description}</p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span class="text-xs font-medium text-text-muted bg-surface border border-border px-3 py-1 rounded-full">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Mobile View All -->
+    <div class="sm:hidden mt-8 text-center">
+      <a href="#" class="inline-flex items-center gap-2 text-accent text-sm font-medium hover:underline cursor-pointer">
+        View All Projects
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
